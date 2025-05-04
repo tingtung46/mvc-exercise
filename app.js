@@ -18,5 +18,8 @@ app.use(express.static(assetsPath));
 app.get("/", (req, res) => {
   res.render("index", { links: links, users: users });
 });
+app.get("/about", (req, res) => {
+  res.render("about", { links: links });
+});
 
 app.listen(3000);
